@@ -1,5 +1,6 @@
 {
   "name": "ecommerce",
+  "homepage": "https://Gauravkr2506.github.io/bakeryShop/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -53,7 +54,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -96,5 +99,8 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }

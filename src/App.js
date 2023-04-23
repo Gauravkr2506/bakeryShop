@@ -1,24 +1,22 @@
 // This is the main Component which draws the tool bar and has route placeholders for other components.
 
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import HomeComponent from './components/HomeComponent';
-import SuccessContainer from './containers/SuccessContainer';
+import HomeComponent from "./components/HomeComponent";
+import SuccessContainer from "./containers/SuccessContainer";
 
 const styles = {
   root: {
     flexGrow: 1,
-  }
+  },
 };
 
-
 class App extends Component {
-
   constructor(props) {
     super(props);
   }
@@ -36,8 +34,8 @@ class App extends Component {
               </Typography>
             </Toolbar>
           </AppBar>
-          <Route exact path="/" component={HomeComponent} />
-          <Route path="/success" component={SuccessContainer} />
+          <Route exact path="/bakeryShop" component={HomeComponent} />
+          <Route path="/bakeryShop/success" component={SuccessContainer} />
         </div>
       </Router>
     );
